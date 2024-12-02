@@ -3,22 +3,37 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --emitDeclarationOnly",
+    "lint": "eslint --fix --ext .ts,.tsx .",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@types/express": "^5.0.0",
+    "@types/compression": "^1.7.5",
+    "@types/express-flash": "^0.0.5",
+    "@types/lusca": "^1.7.5",
     "@types/node": "^22.10.1",
+    "body-parser": "^1.20.3",
+    "compression": "^1.7.5",
     "errorhandler": "^1.5.1",
+    "express": "^4.21.1",
+    "express-flash": "^0.0.2",
+    "lusca": "^1.7.0",
     "typescript": "^5.7.2"
   },
   "devDependencies": {
     "@types/errorhandler": "^1.5.3",
+    "@types/express": "^5.0.0",
     "@typescript-eslint/eslint-plugin": "^8.16.0",
     "@typescript-eslint/parser": "^8.16.0",
-    "eslint": "^9.16.0"
+    "eslint": "^9.16.0",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.4.1",
+    "ts-node": "^10.9.2"
   }
 }
